@@ -1,3 +1,4 @@
+// run go : go run FileName.go
 package main
 
 import "fmt"
@@ -11,6 +12,10 @@ func main() {
 
 	userName = "fesabelilla"
 	userTickets = 2
+
+	// variable value
 	fmt.Printf("User %v booked %v tickets.\n", userName, userTickets)
 
+	// variable type
+	fmt.Printf("userName Type is : %T, userTickets type is : %T", userName, userTickets)
 }
