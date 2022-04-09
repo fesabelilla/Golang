@@ -9,10 +9,11 @@ func main() {
 
 	var userName string
 	var userTickets int
-
-	userName = "fesabelilla"
-	userTickets = 2
-
+	//pointer - memory location ( &VariableName)
+	fmt.Println("Enter your user name :")
+	fmt.Scan(&userName)
+	fmt.Println("Enter your ticket count : ")
+	fmt.Scan(&userTickets)
 	// variable value
 	fmt.Printf("User %v booked %v tickets.\n", userName, userTickets)
 
