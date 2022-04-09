@@ -1,3 +1,4 @@
+//go mod init projectName
 // run go : go run FileName.go
 package main
 
@@ -18,5 +19,25 @@ func main() {
 	fmt.Printf("User %v booked %v tickets.\n", userName, userTickets)
 
 	// variable type
-	fmt.Printf("userName Type is : %T, userTickets type is : %T", userName, userTickets)
+	fmt.Printf("userName Type is : %T, userTickets type is : %T\n", userName, userTickets)
+
+	//ArraysAndSlices
+	//array
+	var names [50]string
+	names[0] = "zahid"
+	names[1] = "hasan"
+
+	fmt.Printf("The whole array: %v\n", names)
+	fmt.Printf("The first value : %v\n", names[0])
+	fmt.Printf("Array Type : %T\n", names)
+	fmt.Printf("Array Length : %v\n", len(names))
+
+	//slice
+	var slice []string
+	slice = append(slice, userName)
+	fmt.Printf("The whole slice : %v\n", slice)
+	fmt.Printf("The first value : %v\n", slice[0])
+	fmt.Printf("Slice type : %T\n", slice)
+	fmt.Printf("Size of the slice : %v", len(slice))
+
 }
