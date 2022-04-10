@@ -2,7 +2,10 @@
 // run go : go run FileName.go
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var conferenceName = "Go Conference"
@@ -38,6 +41,17 @@ func main() {
 	fmt.Printf("The whole slice : %v\n", slice)
 	fmt.Printf("The first value : %v\n", slice[0])
 	fmt.Printf("Slice type : %T\n", slice)
-	fmt.Printf("Size of the slice : %v", len(slice))
+	fmt.Printf("Size of the slice : %v\n", len(slice))
 
+	//loop
+	firstNames := []string{} //declare a slice
+	firstNames = append(firstNames, "zahid hasan")
+	firstNames = append(firstNames, "Sayeed hasan")
+	outPut := []string{}
+	for _, firstName := range firstNames {
+		var names = strings.Fields(firstName)
+		outPut = append(outPut, names[0])
+	}
+
+	fmt.Printf("Only first name :  %v\n", outPut)
 }
