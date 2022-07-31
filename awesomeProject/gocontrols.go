@@ -9,10 +9,20 @@ func forLoop(n int) {
 	}
 }
 
+func forCondition() {
+	sum := 1
+	for sum < 100 {
+		sum += sum
+		fmt.Println(sum)
+	}
+}
+
 func main() {
 	var number int
 	fmt.Printf("Enter a number : ")
 	fmt.Scanln(&number)
 	forLoop(number)
+
+	forCondition()
 
 }
