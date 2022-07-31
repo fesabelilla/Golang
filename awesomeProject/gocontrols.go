@@ -45,13 +45,58 @@ func rangeConstruct() {
 	}
 }
 
+func gotoStatement() {
+	var input int
+
+Loop:
+	fmt.Println("Not eligible to vote !!")
+	fmt.Print("Enter your age : ")
+	fmt.Scanln(&input)
+	if input <= 17 {
+		goto Loop
+	} else {
+		fmt.Print("you can vote")
+	}
+}
+
+func breakStatement() {
+	var a int = 1
+
+	for a < 10 {
+		fmt.Println("Value of a is : ", a)
+		a++
+		if a > 5 {
+			break
+		}
+	}
+}
+
+func continueStatement() {
+	var a int = 1
+	for a < 10 {
+		if a == 5 {
+			/* skip the iteration */
+			a = a + 1
+			continue
+		}
+		fmt.Printf("value of a: %d\n", a)
+		a++
+	}
+}
+
 func main() {
-	//var number int
-	//fmt.Printf("Enter a number : ")
-	//fmt.Scanln(&number)
-	//forLoop(number)
-	//
-	//forCondition()
+	var number int
+	fmt.Printf("Enter a number : ")
+	fmt.Scanln(&number)
+	forLoop(number)
+
+	forCondition()
 
 	rangeConstruct()
+
+	gotoStatement()
+
+	breakStatement()
+
+	continueStatement()
 }
