@@ -14,7 +14,18 @@ func (employee Employee) fullName() {
 }
 
 func sumOfTwoNumber(a int, b int) int {
-	return a + b;
+	return a + b
+}
+
+func addAll(args ...int) (int, int) {
+	finalAddValue := 0
+	finalSubValue := 0
+
+	for _, value := range args {
+		finalAddValue += value
+		finalSubValue -= value
+	}
+	return finalAddValue, finalSubValue
 }
 
 func main() {
@@ -27,4 +38,7 @@ func main() {
 	var sum int
 	sum = sumOfTwoNumber(5, 6)
 	fmt.Println(sum)
+
+	fmt.Println("Go function multiple return")
+	fmt.Println(addAll(10, 15, 20, 25, 30))
 }
