@@ -22,10 +22,13 @@ func main() {
 		"Kamal": 36,
 	}
 	fmt.Print(x)
-	fmt.Println("\n", x["Kamal"])
+	fmt.Println("\n The value is : ", x["Kamal"])
 
 	fmt.Println("Map insert and Update : ")
 	insertAndUpdate(x)
+
+	fmt.Println("key is present in the table with two value example")
+	keyIsPresentWithTwoValue(x)
 }
 
 /*
@@ -46,4 +49,14 @@ func insertAndUpdate(x map[string]int) {
 	fmt.Println("Map delete operation by Key : [Kamal] ")
 	delete(x, "Kamal")
 	fmt.Println(x)
+}
+
+// key is present in the table with two value example
+func keyIsPresentWithTwoValue(x map[string]int) {
+	v, ok := x["Zahid"]
+	fmt.Println("The value is : ", v, " is Present : ", ok)
+
+	i, j := x["Test"]
+	fmt.Println("The value is : ", i, " is Present : ", j)
+
 }
