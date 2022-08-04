@@ -38,7 +38,12 @@ func insertAndUpdate(x map[string]int) {
 	fmt.Println("Insert value : [Halim] = 32 ")
 	x["Halim"] = 32
 	fmt.Println(x)
+
 	fmt.Println("Update value : [Zahid] = 25 ")
 	x["Zahid"] = 25
+	fmt.Println(x)
+
+	fmt.Println("Map delete operation by Key : [Kamal] ")
+	delete(x, "Kamal")
 	fmt.Println(x)
 }
