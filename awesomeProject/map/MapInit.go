@@ -15,6 +15,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Init Map : ")
 	x := map[string]int{
 		"Zahid": 26,
 		"Hasan": 25,
@@ -22,4 +23,22 @@ func main() {
 	}
 	fmt.Print(x)
 	fmt.Println("\n", x["Kamal"])
+
+	fmt.Println("Map insert and Update : ")
+	insertAndUpdate(x)
+}
+
+/*
+update and insert :
+
+	If the map does not contain the provided key the insert operation will takes place
+	If the key is present in the map then update operation takes place.
+*/
+func insertAndUpdate(x map[string]int) {
+	fmt.Println("Insert value : [Halim] = 32 ")
+	x["Halim"] = 32
+	fmt.Println(x)
+	fmt.Println("Update value : [Zahid] = 25 ")
+	x["Zahid"] = 25
+	fmt.Println(x)
 }
