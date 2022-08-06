@@ -1,5 +1,7 @@
 package main
 
+// Panic -> Defer -> Recover
+
 import "fmt"
 
 func x() {
