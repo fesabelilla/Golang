@@ -10,6 +10,12 @@ package main
 	This termination sequences is called panicking and can be controlled by the built-in function recover.
 */
 
-func main() {
+import "os"
 
+func main() {
+	panic("Error Situation")
+	_, err := os.Open("/temp/file")
+	if err != nil {
+		panic(err)
+	}
 }
